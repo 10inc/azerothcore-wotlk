@@ -69,6 +69,13 @@ services:
 
   discord-bot:
     <<: *networks
+    environment:
+      - MYSQL_HOST=ac-database
+      - MYSQL_PORT=${DOCKER_DB_EXTERNAL_PORT:-3306}
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=${DOCKER_DB_ROOT_PASSWORD:-password}
+      - TOKEN=${DISCORD_TOKEN}
+      - CLIENT_ID=${DISCORD_CLIENT_ID}
     depends_on:
       ac-database:
         condition: service_healthy
