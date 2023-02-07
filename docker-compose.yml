@@ -79,7 +79,6 @@ services:
     depends_on:
       ac-database:
         condition: service_healthy
-    env_file: discord-bot/.env
     build:
       context: discord-bot/
       dockerfile: Dockerfile
