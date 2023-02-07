@@ -66,6 +66,16 @@ services:
       timeout: 10s
       retries: 40
 
+  discord-bot:
+    <<: ac-shared-conf
+    depends_on:
+      ac-database:
+        condition: service_healthy
+    env_file: discord_bot/.env
+    build:
+      context: discord_bot/
+      dockerfile: discord_bot/Dockerfile
+
 #======================
 #
 # Dev services
