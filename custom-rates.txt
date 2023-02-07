@@ -1,0 +1,35 @@
+1526 AllowTwoSide.Interaction.Calendar = 1
+AllowTwoSide.Interaction.Chat = 1
+AllowTwoSide.Interaction.Emote = 1
+AllowTwoSide.Interaction.Channel = 1
+AllowTwoSide.Interaction.Group = 1
+AllowTwoSide.Interaction.Guild = 1
+AllowTwoSide.Interaction.Auction = 1
+AllowTwoSide.Interaction.Mail = 1
+AllowTwoSide.WhoList = 1
+AllowTwoSide.AddFriend = 1
+AllowTwoSide.Trade = 1
+
+2258 Rate.Drop.Money = 3
+
+2287 Rate.SellValue.Item.Poor        = 3
+Rate.SellValue.Item.Normal           = 3
+Rate.SellValue.Item.Uncommon         = 3
+Rate.SellValue.Item.Rare             = 3
+Rate.SellValue.Item.Epic             = 3
+Rate.SellValue.Item.Legendary        = 3
+Rate.SellValue.Item.Artifact         = 3
+Rate.SellValue.Item.Heirloom         = 3
+
+2343 Rate.XP.Kill      = 3
+Rate.XP.Quest     = 3
+Rate.XP.Quest.DF  = 3
+Rate.XP.Explore   = 3
+Rate.XP.Pet       = 3
+
+2457 Rate.MoveSpeed = 1.3
+
+2506 SkillGain.Crafting  = 4
+SkillGain.Defense   = 4
+SkillGain.Gathering = 4
+SkillGain.Weapon    = 4

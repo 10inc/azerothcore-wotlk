@@ -22,7 +22,12 @@ module.exports = {
     const username = interaction.options.getString('username')
     const password = interaction.options.getString('password')
 
-    if (!username || !password) { return interaction.reply('Missing arguement for registration.') }
+    if (!username || !password) {
+      return interaction.reply({
+        content: 'Missing arguement for registration.',
+        ephemeral: true
+      })
+    }
     let errorMessage = ''
     if (username.length < 3) { errorMessage = 'Username must be at least 3 characters long.' }
     if (password.length < 6 && password.length > 21 ) { errorMessage = 'Password must be 6-20 characters long.' }
@@ -37,10 +42,16 @@ module.exports = {
       (error, results, fields) => {
         if (error) {
           console.error(error)
-          return interaction.reply('Something went wrong when registering. Ask @MGMT for help.')
+          return interaction.reply({
+            content: 'Something went wrong when registering. Ask @MGMT for help.',
+            ephemeral: true
+          })
         } else {
           console.log(`Account created: ${username}`)
-          interaction.reply('Account created, you may login now.')
+          interaction.reply({
+            content: "Account created, you may login now.",
+            ephemeral: true,
+          });
         }
       }
     )
