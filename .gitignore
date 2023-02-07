@@ -28,6 +28,8 @@
 /apps/joiner
 /deps/deno
 
+/docker-compose.override.yml
+
 !.gitkeep
 
 #

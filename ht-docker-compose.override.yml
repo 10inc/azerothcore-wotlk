@@ -6,3 +6,13 @@ services:
       - ./conf/worldserver.conf:/azerothcore/env/dist/etc/worldserver.conf
       - ./conf/authserver.conf:/azerothcore/env/dist/etc/authserver.conf
       - ./conf/dbimport.conf:/azerothcore/env/dist/etc/dbimport.conf
+
+  discord-bot:
+    <<: *ac-shared-conf
+    depends_on:
+      ac-database:
+        condition: service_healthy
+    env_file: discord_bot/.env
+    build:
+      context: discord_bot/
+      dockerfile: discord_bot/Dockerfile
