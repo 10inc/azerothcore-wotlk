@@ -5,4 +5,5 @@ WORKDIR /bot
 COPY package*.json ./
 RUN npm install -y
 
-CMD ['npm', 'start']
+COPY . .
+CMD npm start
