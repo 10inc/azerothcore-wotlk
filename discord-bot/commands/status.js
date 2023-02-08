@@ -14,7 +14,7 @@ module.exports = {
           console.error(error);
           return interaction.reply("Something went wrong. Ask @MGMT for help.");
         }
-        const count = results.length();
+        const count = results.length;
         const names = results.map((result) => result["name"]).join(', ');
         const message =
           count === 0
