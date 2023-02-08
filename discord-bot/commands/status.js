@@ -15,11 +15,13 @@ module.exports = {
           return interaction.reply("Something went wrong. Ask @MGMT for help.");
         }
         const count = results.length();
-        const names = results.join(",");
-        console.log(results);
-        console.log(names);
-        console.log(count);
-        return interaction.reply(`${count} Players online: ${names}`);
+        const names = results.map((result) => result["name"]).join(', ');
+        const message =
+          count === 0
+            ? "No one is online."
+            : `${count} players are online: ${names}`;
+
+        return interaction.reply(message);
       }
     );
   }
